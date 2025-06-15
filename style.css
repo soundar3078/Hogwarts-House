@@ -311,3 +311,15 @@ button:hover::before {
 #musicToggle.muted {
   opacity: 0.5;
 }
+
+/* Hide result elements during quiz */
+#house-result, #patronus-result, #house-crest {
+  display: none;
+}
+
+/* Only show them in results */
+#result #house-result,
+#result #patronus-result,
+#result #house-crest {
+  display: inline; /* or block, depending on element */
+}
