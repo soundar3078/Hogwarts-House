@@ -85,30 +85,39 @@ const questions = [
     ]
   },
   {
-    text: "Your favorite class would be:",
-    answers: [
-      { text: "Defense Against the Dark Arts", gryffindor: 2, patronus: "lion" },
-      { text: "Potions", slytherin: 2, patronus: "snake" },
-      { text: "Astronomy", ravenclaw: 2, patronus: "eagle" },
-      { text: "Herbology", hufflepuff: 2, patronus: "badger" }
-    ]
-  },
-  {
     text: "How do you handle challenges?",
     answers: [
-      { text: "Charge in headfirst", gryffindor: 2, patronus: "stag" },
-      { text: "Find a clever shortcut", slytherin: 2, patronus: "fox" },
-      { text: "Research thoroughly", ravenclaw: 2, patronus: "owl" },
+      { text: "Face them head-on", gryffindor: 2, patronus: "lion" },
+      { text: "Find clever shortcuts", slytherin: 2, patronus: "fox" },
+      { text: "Research solutions", ravenclaw: 2, patronus: "owl" },
       { text: "Ask for help", hufflepuff: 2, patronus: "dog" }
     ]
   },
   {
-    text: "Pick a magical creature:",
+    text: "Your ideal weekend involves:",
     answers: [
-      { text: "Griffin", gryffindor: 1, patronus: "griffin" },
-      { text: "Basilisk", slytherin: 1, patronus: "serpent" },
-      { text: "Phoenix", ravenclaw: 1, patronus: "phoenix" },
-      { text: "House-Elf", hufflepuff: 1, patronus: "hare" }
+      { text: "Adventure sports", gryffindor: 2 },
+      { text: "Strategic games", slytherin: 2 },
+      { text: "Reading/learning", ravenclaw: 2 },
+      { text: "Helping others", hufflepuff: 2 }
+    ]
+  },
+  {
+    text: "What's your leadership style?",
+    answers: [
+      { text: "Bold and decisive", gryffindor: 2 },
+      { text: "Calculated and goal-oriented", slytherin: 2 },
+      { text: "Analytical and fair", ravenclaw: 2 },
+      { text: "Supportive and inclusive", hufflepuff: 2 }
+    ]
+  },
+  {
+    text: "Choose a superpower:",
+    answers: [
+      { text: "Super strength", gryffindor: 2, patronus: "bear" },
+      { text: "Invisibility", slytherin: 2, patronus: "chameleon" },
+      { text: "Teleportation", ravenclaw: 2, patronus: "hummingbird" },
+      { text: "Healing", hufflepuff: 2, patronus: "dolphin" }
     ]
   },
   {
@@ -121,52 +130,132 @@ const questions = [
     ]
   },
   {
-    text: "Choose a Hogwarts ghost:",
+    text: "When working in a team, you:",
     answers: [
-      { text: "Nearly Headless Nick", gryffindor: 1 },
-      { text: "The Bloody Baron", slytherin: 1 },
-      { text: "The Grey Lady", ravenclaw: 1 },
-      { text: "The Fat Friar", hufflepuff: 1 }
+      { text: "Take charge", gryffindor: 2 },
+      { text: "Find the most efficient path", slytherin: 2 },
+      { text: "Ensure logical solutions", ravenclaw: 2 },
+      { text: "Keep everyone united", hufflepuff: 2 }
     ]
   },
   {
-    text: "Which weapon would you choose?",
+    text: "Your approach to rules is:",
     answers: [
-      { text: "Sword", gryffindor: 2, patronus: "wolf" },
-      { text: "Dagger", slytherin: 2, patronus: "panther" },
-      { text: "Bow and arrow", ravenclaw: 2, patronus: "swan" },
-      { text: "Shield", hufflepuff: 2, patronus: "bear" }
+      { text: "Break them if justified", gryffindor: 2 },
+      { text: "Bend them to your advantage", slytherin: 2 },
+      { text: "Understand their purpose", ravenclaw: 2 },
+      { text: "Follow them diligently", hufflepuff: 2 }
+    ]
+  },
+  {
+    text: "Your greatest strength is:",
+    answers: [
+      { text: "Courage", gryffindor: 2 },
+      { text: "Determination", slytherin: 2 },
+      { text: "Creativity", ravenclaw: 2 },
+      { text: "Empathy", hufflepuff: 2 }
+    ]
+  },
+  {
+    text: "What motivates you most?",
+    answers: [
+      { text: "Overcoming obstacles", gryffindor: 2 },
+      { text: "Achieving success", slytherin: 2 },
+      { text: "Gaining knowledge", ravenclaw: 2 },
+      { text: "Building relationships", hufflepuff: 2 }
+    ]
+  },
+  {
+    text: "Your dream vacation is:",
+    answers: [
+      { text: "Mountain climbing", gryffindor: 2, patronus: "mountain goat" },
+      { text: "Luxury resort", slytherin: 2, patronus: "peacock" },
+      { text: "Cultural exploration", ravenclaw: 2, patronus: "butterfly" },
+      { text: "Volunteer trip", hufflepuff: 2, patronus: "elephant" }
+    ]
+  },
+  {
+    text: "In a crisis, you:",
+    answers: [
+      { text: "Act immediately", gryffindor: 2 },
+      { text: "Assess the best outcome for yourself", slytherin: 2 },
+      { text: "Analyze the situation", ravenclaw: 2 },
+      { text: "Ensure everyone's safe", hufflepuff: 2 }
+    ]
+  },
+  {
+    text: "Your favorite subject would be:",
+    answers: [
+      { text: "Physical Education", gryffindor: 2 },
+      { text: "Economics", slytherin: 2 },
+      { text: "Science", ravenclaw: 2 },
+      { text: "Psychology", hufflepuff: 2 }
+    ]
+  },
+  {
+    text: "How do you make decisions?",
+    answers: [
+      { text: "Go with your gut", gryffindor: 2 },
+      { text: "Weigh pros and cons", slytherin: 2 },
+      { text: "Research thoroughly", ravenclaw: 2 },
+      { text: "Consult friends/family", hufflepuff: 2 }
     ]
   },
   {
     text: "Your ideal pet is:",
     answers: [
-      { text: "Owl", ravenclaw: 1, patronus: "owl" },
-      { text: "Cat", slytherin: 1, patronus: "cat" },
-      { text: "Toad", hufflepuff: 1, patronus: "toad" },
-      { text: "Rat", gryffindor: 1, patronus: "rat" }
+      { text: "Large dog", gryffindor: 1, patronus: "wolf" },
+      { text: "Exotic reptile", slytherin: 1, patronus: "snake" },
+      { text: "Parrot", ravenclaw: 1, patronus: "raven" },
+      { text: "Golden retriever", hufflepuff: 1, patronus: "rabbit" }
     ]
   },
   {
-    text: "Which magical object calls to you?",
+    text: "Your communication style is:",
     answers: [
-      { text: "Sorting Hat", gryffindor: 1 },
-      { text: "Invisibility Cloak", slytherin: 1 },
-      { text: "Time-Turner", ravenclaw: 1 },
-      { text: "Golden Snitch", hufflepuff: 1 }
+      { text: "Direct and bold", gryffindor: 2 },
+      { text: "Persuasive", slytherin: 2 },
+      { text: "Precise", ravenclaw: 2 },
+      { text: "Warm and friendly", hufflepuff: 2 }
     ]
   },
   {
     text: "Your greatest fear is:",
     answers: [
-      { text: "Failure", gryffindor: 2 },
-      { text: "Weakness", slytherin: 2 },
-      { text: "Ignorance", ravenclaw: 2 },
-      { text: "Betrayal", hufflepuff: 2 }
+      { text: "Being powerless", gryffindor: 2 },
+      { text: "Being ordinary", slytherin: 2 },
+      { text: "Being ignorant", ravenclaw: 2 },
+      { text: "Being alone", hufflepuff: 2 }
+    ]
+  },
+  {
+    text: "Your role in a friend group is:",
+    answers: [
+      { text: "The protector", gryffindor: 2 },
+      { text: "The strategist", slytherin: 2 },
+      { text: "The advisor", ravenclaw: 2 },
+      { text: "The peacemaker", hufflepuff: 2 }
+    ]
+  },
+  {
+    text: "What's your learning style?",
+    answers: [
+      { text: "Hands-on experience", gryffindor: 2 },
+      { text: "Competitive environments", slytherin: 2 },
+      { text: "Independent study", ravenclaw: 2 },
+      { text: "Group collaboration", hufflepuff: 2 }
+    ]
+  },
+  {
+    text: "Your life motto would be:",
+    answers: [
+      { text: "Fortune favors the bold", gryffindor: 2 },
+      { text: "The ends justify the means", slytherin: 2 },
+      { text: "Knowledge is power", ravenclaw: 2 },
+      { text: "Kindness changes everything", hufflepuff: 2 }
     ]
   }
 ];
-
 // State Management
 let currentQuestion = 0;
 let scores = {
@@ -198,16 +287,50 @@ function showQuestion() {
   }
 
   const question = questions[currentQuestion];
-  let questionHTML = `<div class="question"><h3>${question.text}</h3><div class="answers">`;
+  
+  // Create question HTML with progress indicator
+  let questionHTML = `
+    <div class="question">
+      <div class="progress">Question ${currentQuestion + 1} of ${questions.length}</div>
+      <h3>${question.text}</h3>
+      <div class="answers">
+  `;
 
+  // Add answer buttons with improved accessibility
   question.answers.forEach((answer, index) => {
-    questionHTML += `<button onclick="handleAnswer(${index})">${answer.text}</button>`;
+    questionHTML += `
+      <button 
+        onclick="handleAnswer(${index})"
+        aria-label="${answer.text}"
+        data-house="${Object.keys(answer).find(key => 
+          ['gryffindor','slytherin','ravenclaw','hufflepuff'].includes(key)) || 'neutral'}"
+      >
+        ${answer.text}
+      </button>
+    `;
   });
 
   questionHTML += `</div></div>`;
-  quizContainer.innerHTML = questionHTML;
+  
+  // Smooth transition between questions
+  quizContainer.style.opacity = 0;
+  setTimeout(() => {
+    quizContainer.innerHTML = questionHTML;
+    quizContainer.style.opacity = 1;
+    
+    // Add visual feedback for answer options
+    document.querySelectorAll('.answers button').forEach(btn => {
+      btn.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.05)';
+        this.style.boxShadow = '0 0 15px rgba(210, 180, 140, 0.7)';
+      });
+      btn.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+        this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.3)';
+      });
+    });
+  }, 300);
 }
-
 // Process answer
 function handleAnswer(answerIndex) {
   const answer = questions[currentQuestion].answers[answerIndex];
@@ -248,7 +371,7 @@ function showResult() {
   
   // Apply house theme
   document.body.className = house;
-  houseCrest.src = `assets/crests/${house}.png`;
+  houseCrest.src = `assets/images/crests/${house}.png`;
   
   // Play house fanfare
   playSound(`${house}.mp3`);
