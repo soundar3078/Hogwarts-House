@@ -353,7 +353,7 @@ function handleAnswer(answerIndex) {
 // Calculate and display result
 function showResult() {
   quizContainer.classList.add('hidden');
-  resultDiv.classList.remove('hidden');
+  resultDiv.classList.remove('hidden'); //
   
   // Determine house (highest score)
   const houses = ["gryffindor", "slytherin", "ravenclaw", "hufflepuff"];
@@ -389,7 +389,7 @@ restartBtn.addEventListener('click', () => {
   };
   
   document.body.className = '';
-  resultDiv.classList.add('hidden');
+  resultDiv.classList.add('hidden'); //
   quizContainer.classList.remove('hidden');
   showQuestion();
 });
