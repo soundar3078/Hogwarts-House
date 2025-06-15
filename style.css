@@ -202,6 +202,12 @@ button:hover::before {
   border-radius: 15px;
   animation: fadeIn 1.5s ease-out;
   position: relative;
+  /* ADDED: Ensure #result is hidden by default */
+  display: none; /* */
+}
+
+#result.hidden { /* */
+  display: none; /* */
 }
 
 #result h2 {
