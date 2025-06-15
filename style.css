@@ -289,3 +289,25 @@ button:hover::before {
   color: #f0e6d2;
   font-size: 1.2rem;
 }
+
+#musicToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(210, 180, 140, 0.7);
+  border: none;
+  color: #000;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#musicToggle.muted {
+  opacity: 0.5;
+}
