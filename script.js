@@ -403,5 +403,56 @@ function playSound(soundFile) {
   }
 }
 
+// Background music control - AUTOPLAY VERSION
+document.addEventListener('DOMContentLoaded', () => {
+  const bgMusic = document.getElementById('bgMusic');
+  const musicToggle = document.getElementById('musicToggle');
+  
+  // Set initial volume (30%)
+  bgMusic.volume = 0.3;
+
+  // Try autoplay immediately
+  const tryAutoplay = () => {
+    bgMusic.play()
+      .then(() => {
+        musicToggle.classList.remove('muted');
+        musicToggle.textContent = '🔊';
+      })
+      .catch(e => {
+        // If blocked, wait for user interaction
+        console.log("Autoplay blocked:", e);
+        musicToggle.textContent = "▶ Click to enable sound";
+        document.body.addEventListener('click', unlockAudio, { once: true });
+      });
+  };
+
+  // Unlock audio on interaction
+  const unlockAudio = () => {
+    bgMusic.play()
+      .then(() => {
+        musicToggle.classList.remove('muted');
+        musicToggle.textContent = '🔊';
+      })
+      .catch(e => console.log("Still blocked:", e));
+  };
+
+  // Toggle button functionality
+  musicToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (bgMusic.paused) {
+      bgMusic.play();
+      musicToggle.classList.remove('muted');
+      musicToggle.textContent = '🔊';
+    } else {
+      bgMusic.pause();
+      musicToggle.classList.add('muted');
+      musicToggle.textContent = '🔇';
+    }
+  });
+
+  // Initial attempt
+  tryAutoplay();
+});
+
 // Start the quiz
 startQuiz();
