@@ -202,12 +202,11 @@ button:hover::before {
   border-radius: 15px;
   animation: fadeIn 1.5s ease-out;
   position: relative;
-  /* ADDED: Ensure #result is hidden by default */
-  display: none; /* */
+  /* REMOVED: display: none; */ 
 }
 
-#result.hidden { /* */
-  display: none; /* */
+#result.hidden { 
+  display: none; 
 }
 
 #result h2 {
@@ -319,6 +318,7 @@ button:hover::before {
 }
 
 /* Hide result elements during quiz */
+/* These rules are good as they ensure these elements are hidden unless part of #result which is visible */
 #house-result, #patronus-result, #house-crest {
   display: none;
 }
