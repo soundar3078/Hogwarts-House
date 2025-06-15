@@ -329,3 +329,12 @@ button:hover::before {
 #result #house-crest {
   display: inline; /* or block, depending on element */
 }
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  color: #f0e6d2;
+  font-size: 0.9rem;
+  opacity: 0.6; /* Light opacity */
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
