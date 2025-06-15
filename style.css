@@ -98,6 +98,7 @@ h1 {
   box-shadow: 0 0 15px rgba(210, 180, 140, 0.5);
   position: relative;
   transition: all 0.5s ease;
+  animation: fadeIn 0.8s ease-out;
 }
 
 .question h3 {
@@ -275,4 +276,16 @@ button:hover::before {
     transform: translate(var(--tx), var(--ty));
     opacity: 0;
   }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#progress {
+  margin: 20px 0;
+  color: #f0e6d2;
+  font-size: 1.2rem;
 }
